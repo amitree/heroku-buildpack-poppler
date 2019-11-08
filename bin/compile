@@ -1,0 +1,10 @@
+#!/bin/bash
+
+BUILD_DIR=$1
+
+PKG=poppler_0.81.0-1_amd64.deb
+
+echo "Extracting $PKG..."
+mkdir -p $BUILD_DIR/.apt
+dpkg -x "$PKG" $BUILD_DIR/.apt/
+echo "Done"
